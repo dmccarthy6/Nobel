@@ -7,24 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		616C64192419475D006A5A86 /* UICollectionView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C64182419475D006A5A86 /* UICollectionView+Additions.swift */; };
+		616C641B24194994006A5A86 /* NSCollectionLayoutSection+ComposedLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C641A24194994006A5A86 /* NSCollectionLayoutSection+ComposedLayouts.swift */; };
+		616C641D24194B24006A5A86 /* CustomNobelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C641C24194B24006A5A86 /* CustomNobelCell.swift */; };
+		616C641F24196423006A5A86 /* GraphWeightedEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C641E24196423006A5A86 /* GraphWeightedEdge.swift */; };
+		616C64212419647F006A5A86 /* Summable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C64202419647F006A5A86 /* Summable.swift */; };
+		616C64232419661F006A5A86 /* WeightedGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C64222419661F006A5A86 /* WeightedGraph.swift */; };
 		616C7C942416E4F800577791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7C932416E4F800577791 /* AppDelegate.swift */; };
 		616C7C962416E4F800577791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7C952416E4F800577791 /* SceneDelegate.swift */; };
-		616C7C982416E4F800577791 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7C972416E4F800577791 /* ViewController.swift */; };
-		616C7C9B2416E4F800577791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 616C7C992416E4F800577791 /* Main.storyboard */; };
+		616C7C982416E4F800577791 /* LaureatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7C972416E4F800577791 /* LaureatsViewController.swift */; };
 		616C7C9D2416E4FD00577791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 616C7C9C2416E4FD00577791 /* Assets.xcassets */; };
 		616C7CA02416E4FD00577791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 616C7C9E2416E4FD00577791 /* LaunchScreen.storyboard */; };
 		616C7CAB2416E4FD00577791 /* NobelLaureatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7CAA2416E4FD00577791 /* NobelLaureatesTests.swift */; };
-		616C7CBC2416E64200577791 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7CBB2416E64200577791 /* Vertex.swift */; };
 		616C7CBE2416E65200577791 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7CBD2416E65200577791 /* Edge.swift */; };
 		616C7CC02416E74600577791 /* EdgeTyoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7CBF2416E74600577791 /* EdgeTyoe.swift */; };
-		616C7CC22416E90200577791 /* Laureat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7CC12416E90200577791 /* Laureat.swift */; };
-		616C7CC42416EC1B00577791 /* GraphInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7CC32416EC1B00577791 /* GraphInterface.swift */; };
-		616C7CC62416ECE900577791 /* LaureatsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7CC52416ECE900577791 /* LaureatsList.swift */; };
+		616C7CC22416E90200577791 /* Laureate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7CC12416E90200577791 /* Laureate.swift */; };
+		616C7CC42416EC1B00577791 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7CC32416EC1B00577791 /* Graph.swift */; };
 		616C7CC92416ED9700577791 /* DecodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7CC82416ED9700577791 /* DecodeData.swift */; };
 		616C7CCC2416F62D00577791 /* JSONError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7CCB2416F62D00577791 /* JSONError.swift */; };
 		616C7CCE2416F7AC00577791 /* nobel-prize-laureates.json in Resources */ = {isa = PBXBuildFile; fileRef = 616C7CCD2416F7AB00577791 /* nobel-prize-laureates.json */; };
-		616C7CD02416F94500577791 /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7CCF2416F94500577791 /* URL+.swift */; };
-		616C7CD2241701A500577791 /* CalculateDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7CD1241701A500577791 /* CalculateDistance.swift */; };
+		616C7CD02416F94500577791 /* URL+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7CCF2416F94500577791 /* URL+Additions.swift */; };
+		616C7CD624170E1100577791 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7CD524170E1100577791 /* WelcomeViewController.swift */; };
+		616C7CDA2417F34900577791 /* LocationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7CD92417F34900577791 /* LocationProtocol.swift */; };
+		616C7CDE24183D1700577791 /* CreateGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7CDD24183D1700577791 /* CreateGraph.swift */; };
+		616C7CE224184CBB00577791 /* UIFont+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C7CE124184CBB00577791 /* UIFont+Additions.swift */; };
+		61D3E5C42419B10000AAE7F7 /* SearchAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3E5C32419B10000AAE7F7 /* SearchAlgorithm.swift */; };
+		61D3E5C62419B46000AAE7F7 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3E5C52419B46000AAE7F7 /* PriorityQueue.swift */; };
+		61D3E5CA2419FCEF00AAE7F7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3E5C92419FCEF00AAE7F7 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,28 +47,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		616C64182419475D006A5A86 /* UICollectionView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Additions.swift"; sourceTree = "<group>"; };
+		616C641A24194994006A5A86 /* NSCollectionLayoutSection+ComposedLayouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollectionLayoutSection+ComposedLayouts.swift"; sourceTree = "<group>"; };
+		616C641C24194B24006A5A86 /* CustomNobelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNobelCell.swift; sourceTree = "<group>"; };
+		616C641E24196423006A5A86 /* GraphWeightedEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphWeightedEdge.swift; sourceTree = "<group>"; };
+		616C64202419647F006A5A86 /* Summable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summable.swift; sourceTree = "<group>"; };
+		616C64222419661F006A5A86 /* WeightedGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightedGraph.swift; sourceTree = "<group>"; };
 		616C7C902416E4F800577791 /* NobelLaureates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NobelLaureates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		616C7C932416E4F800577791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		616C7C952416E4F800577791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		616C7C972416E4F800577791 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		616C7C9A2416E4F800577791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		616C7C972416E4F800577791 /* LaureatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaureatsViewController.swift; sourceTree = "<group>"; };
 		616C7C9C2416E4FD00577791 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		616C7C9F2416E4FD00577791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		616C7CA12416E4FD00577791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		616C7CA62416E4FD00577791 /* NobelLaureatesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NobelLaureatesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		616C7CAA2416E4FD00577791 /* NobelLaureatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobelLaureatesTests.swift; sourceTree = "<group>"; };
 		616C7CAC2416E4FD00577791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		616C7CBB2416E64200577791 /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
 		616C7CBD2416E65200577791 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
 		616C7CBF2416E74600577791 /* EdgeTyoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeTyoe.swift; sourceTree = "<group>"; };
-		616C7CC12416E90200577791 /* Laureat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Laureat.swift; sourceTree = "<group>"; };
-		616C7CC32416EC1B00577791 /* GraphInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphInterface.swift; sourceTree = "<group>"; };
-		616C7CC52416ECE900577791 /* LaureatsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaureatsList.swift; sourceTree = "<group>"; };
+		616C7CC12416E90200577791 /* Laureate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Laureate.swift; sourceTree = "<group>"; };
+		616C7CC32416EC1B00577791 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		616C7CC82416ED9700577791 /* DecodeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeData.swift; sourceTree = "<group>"; };
 		616C7CCB2416F62D00577791 /* JSONError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONError.swift; sourceTree = "<group>"; };
 		616C7CCD2416F7AB00577791 /* nobel-prize-laureates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "nobel-prize-laureates.json"; sourceTree = "<group>"; };
-		616C7CCF2416F94500577791 /* URL+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
-		616C7CD1241701A500577791 /* CalculateDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateDistance.swift; sourceTree = "<group>"; };
+		616C7CCF2416F94500577791 /* URL+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Additions.swift"; sourceTree = "<group>"; };
+		616C7CD524170E1100577791 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		616C7CD92417F34900577791 /* LocationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProtocol.swift; sourceTree = "<group>"; };
+		616C7CDD24183D1700577791 /* CreateGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGraph.swift; sourceTree = "<group>"; };
+		616C7CE124184CBB00577791 /* UIFont+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Additions.swift"; sourceTree = "<group>"; };
+		61D3E5C32419B10000AAE7F7 /* SearchAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAlgorithm.swift; sourceTree = "<group>"; };
+		61D3E5C52419B46000AAE7F7 /* PriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
+		61D3E5C92419FCEF00AAE7F7 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				616C7C922416E4F800577791 /* NobelLaureates */,
+				616C7C932416E4F800577791 /* AppDelegate.swift */,
+				616C7C952416E4F800577791 /* SceneDelegate.swift */,
 				616C7CA92416E4FD00577791 /* NobelLaureatesTests */,
 				616C7C912416E4F800577791 /* Products */,
 			);
@@ -101,12 +121,12 @@
 		616C7C922416E4F800577791 /* NobelLaureates */ = {
 			isa = PBXGroup;
 			children = (
-				616C7CCD2416F7AB00577791 /* nobel-prize-laureates.json */,
 				616C7CA12416E4FD00577791 /* Info.plist */,
+				616C7CD424170C6F00577791 /* Data */,
 				616C7CB62416E5C300577791 /* Utilities */,
+				616C7CB82416E5FA00577791 /* Model */,
 				616C7CBA2416E60B00577791 /* Views */,
 				616C7CB92416E60100577791 /* Controller */,
-				616C7CB82416E5FA00577791 /* Model */,
 				616C7CB72416E5EF00577791 /* Resources */,
 			);
 			path = NobelLaureates;
@@ -124,10 +144,14 @@
 		616C7CB52416E5B300577791 /* Graph */ = {
 			isa = PBXGroup;
 			children = (
-				616C7CBB2416E64200577791 /* Vertex.swift */,
+				616C7CDD24183D1700577791 /* CreateGraph.swift */,
 				616C7CBD2416E65200577791 /* Edge.swift */,
-				616C7CC32416EC1B00577791 /* GraphInterface.swift */,
-				616C7CC52416ECE900577791 /* LaureatsList.swift */,
+				616C7CC32416EC1B00577791 /* Graph.swift */,
+				616C64222419661F006A5A86 /* WeightedGraph.swift */,
+				616C641E24196423006A5A86 /* GraphWeightedEdge.swift */,
+				616C64202419647F006A5A86 /* Summable.swift */,
+				61D3E5C32419B10000AAE7F7 /* SearchAlgorithm.swift */,
+				61D3E5C52419B46000AAE7F7 /* PriorityQueue.swift */,
 			);
 			path = Graph;
 			sourceTree = "<group>";
@@ -135,11 +159,8 @@
 		616C7CB62416E5C300577791 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				616C7CD324170C4800577791 /* Extensions */,
 				616C7CCA2416EE3F00577791 /* Enums */,
-				616C7CC72416ED8200577791 /* API */,
-				616C7CB52416E5B300577791 /* Graph */,
-				616C7CCF2416F94500577791 /* URL+.swift */,
-				616C7CD1241701A500577791 /* CalculateDistance.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -148,9 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				616C7C9C2416E4FD00577791 /* Assets.xcassets */,
-				616C7C992416E4F800577791 /* Main.storyboard */,
-				616C7C932416E4F800577791 /* AppDelegate.swift */,
-				616C7C952416E4F800577791 /* SceneDelegate.swift */,
 				616C7C9E2416E4FD00577791 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
@@ -159,7 +177,7 @@
 		616C7CB82416E5FA00577791 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				616C7CC12416E90200577791 /* Laureat.swift */,
+				616C7CC12416E90200577791 /* Laureate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,7 +185,8 @@
 		616C7CB92416E60100577791 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				616C7C972416E4F800577791 /* ViewController.swift */,
+				616C7CD524170E1100577791 /* WelcomeViewController.swift */,
+				616C7C972416E4F800577791 /* LaureatsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,6 +194,8 @@
 		616C7CBA2416E60B00577791 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				616C641C24194B24006A5A86 /* CustomNobelCell.swift */,
+				61D3E5C92419FCEF00AAE7F7 /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				616C7CC82416ED9700577791 /* DecodeData.swift */,
+				616C7CD92417F34900577791 /* LocationProtocol.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -194,6 +216,27 @@
 				616C7CCB2416F62D00577791 /* JSONError.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		616C7CD324170C4800577791 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				616C7CCF2416F94500577791 /* URL+Additions.swift */,
+				616C7CE124184CBB00577791 /* UIFont+Additions.swift */,
+				616C64182419475D006A5A86 /* UICollectionView+Additions.swift */,
+				616C641A24194994006A5A86 /* NSCollectionLayoutSection+ComposedLayouts.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		616C7CD424170C6F00577791 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				616C7CCD2416F7AB00577791 /* nobel-prize-laureates.json */,
+				616C7CC72416ED8200577791 /* API */,
+				616C7CB52416E5B300577791 /* Graph */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +323,6 @@
 				616C7CCE2416F7AC00577791 /* nobel-prize-laureates.json in Resources */,
 				616C7CA02416E4FD00577791 /* LaunchScreen.storyboard in Resources */,
 				616C7C9D2416E4FD00577791 /* Assets.xcassets in Resources */,
-				616C7C9B2416E4F800577791 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,19 +340,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				616C7C982416E4F800577791 /* ViewController.swift in Sources */,
-				616C7CBC2416E64200577791 /* Vertex.swift in Sources */,
-				616C7CC42416EC1B00577791 /* GraphInterface.swift in Sources */,
-				616C7CD2241701A500577791 /* CalculateDistance.swift in Sources */,
+				616C7C982416E4F800577791 /* LaureatsViewController.swift in Sources */,
+				616C641F24196423006A5A86 /* GraphWeightedEdge.swift in Sources */,
+				616C7CDE24183D1700577791 /* CreateGraph.swift in Sources */,
+				616C7CC42416EC1B00577791 /* Graph.swift in Sources */,
+				61D3E5C62419B46000AAE7F7 /* PriorityQueue.swift in Sources */,
 				616C7C942416E4F800577791 /* AppDelegate.swift in Sources */,
+				616C7CDA2417F34900577791 /* LocationProtocol.swift in Sources */,
+				61D3E5C42419B10000AAE7F7 /* SearchAlgorithm.swift in Sources */,
+				616C64232419661F006A5A86 /* WeightedGraph.swift in Sources */,
 				616C7CCC2416F62D00577791 /* JSONError.swift in Sources */,
-				616C7CC62416ECE900577791 /* LaureatsList.swift in Sources */,
+				616C7CE224184CBB00577791 /* UIFont+Additions.swift in Sources */,
+				616C64192419475D006A5A86 /* UICollectionView+Additions.swift in Sources */,
+				616C641B24194994006A5A86 /* NSCollectionLayoutSection+ComposedLayouts.swift in Sources */,
 				616C7CC02416E74600577791 /* EdgeTyoe.swift in Sources */,
-				616C7CD02416F94500577791 /* URL+.swift in Sources */,
+				616C7CD02416F94500577791 /* URL+Additions.swift in Sources */,
+				616C64212419647F006A5A86 /* Summable.swift in Sources */,
 				616C7CBE2416E65200577791 /* Edge.swift in Sources */,
 				616C7CC92416ED9700577791 /* DecodeData.swift in Sources */,
 				616C7C962416E4F800577791 /* SceneDelegate.swift in Sources */,
-				616C7CC22416E90200577791 /* Laureat.swift in Sources */,
+				616C7CC22416E90200577791 /* Laureate.swift in Sources */,
+				616C7CD624170E1100577791 /* WelcomeViewController.swift in Sources */,
+				61D3E5CA2419FCEF00AAE7F7 /* HeaderView.swift in Sources */,
+				616C641D24194B24006A5A86 /* CustomNobelCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,14 +385,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		616C7C992416E4F800577791 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				616C7C9A2416E4F800577791 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		616C7C9E2416E4FD00577791 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
