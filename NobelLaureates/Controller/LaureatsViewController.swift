@@ -48,7 +48,7 @@ final class LaureatesViewController: UIViewController, DecodeLaureat {
         return collectionView
     }()
     private lazy var diffableDataSource: DifDataSource = {
-        // set up cell
+        /// set up cell
         let diffableDataSource = DifDataSource(collectionView: collectionView) { [weak self]
             (collectionView, indexPath, element) -> UICollectionViewCell? in
             
@@ -57,7 +57,7 @@ final class LaureatesViewController: UIViewController, DecodeLaureat {
 //            cell.configure(name: "Name", surname: "Lastname", category: "Category", motivation: "motivation")
             return cell
         }
-        
+        /// Set Up Header
         diffableDataSource.supplementaryViewProvider = { [weak self]
             collectionView, kind, indexPath -> UICollectionReusableView? in
             let section = diffableDataSource.snapshot().sectionIdentifiers[indexPath.section]

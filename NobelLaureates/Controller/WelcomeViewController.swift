@@ -4,7 +4,7 @@
 
 import UIKit
 
-final class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController, DecodeLaureat {
     //MARK: - Properties
     private let textBackground: UIVisualEffectView = {
         let blurEffect = UIBlurEffect(style: .systemMaterial)
@@ -48,10 +48,10 @@ final class WelcomeViewController: UIViewController {
         textField.tag = 2
         textField.adjustsFontForContentSizeCategory = true
         textField.textColor = .label
-        textField.placeholder = "Year"
+        textField.placeholder = "Year, ex. 2020"
         return textField
     }()
-    
+    typealias Element = Laureate
     
     
     
@@ -60,9 +60,7 @@ final class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         layoutView()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(searchBarTapped))
-        
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Search", style: .done, target: self, action: #selector(searchBarTapped))
     }
     
     /// When the navigation bar is tapped, check the text fields are not empty, add the user entered data as a 'Laureate' value and perform the search
@@ -73,10 +71,10 @@ final class WelcomeViewController: UIViewController {
             let longitude = Double(longitudeTextField.text!)
             let year = yearTextField.text!
             
-            let current = Laureate(id: 9999, category: "", died: "", diedcity: "", borncity: "", born: "", surname: "", firstname: "", motivation: "", location: ["lat" : latitude!, "lng" : longitude!], city: "", borncountry: "", year: year, diedcountry: "", country: "", gender: "", name: "", weight: nil)
+            let userEnteredData = Laureate(id: 9999, category: "", died: "", diedcity: "", borncity: "", born: "", surname: "", firstname: "", motivation: "", location: ["lat" : latitude!, "lng" : longitude!], city: "", borncountry: "", year: year, diedcountry: "", country: "", gender: "", name: "", weight: nil)
             
             let nobelVC = LaureatesViewController()
-            nobelVC.userEnteredData = current
+            nobelVC.userEnteredData = userEnteredData
             navigationController?.pushViewController(nobelVC, animated: true)
         }
         else {
@@ -85,9 +83,14 @@ final class WelcomeViewController: UIViewController {
         }
     }
     
+    /// TO-DO: Implement text field validation to confirm the latitude, longitude, and year values are formatted correctly.
     func validateTextFieldData() {
         ///Would write a function to validate that the numbers entered are correct
         ///Lat/Long values & the year was correct as well.
+    }
+    
+    private func searchLaureates() {
+        
     }
     
     //MARK: -
@@ -117,7 +120,7 @@ final class WelcomeViewController: UIViewController {
 
 extension WelcomeViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-
+        textField.resignFirstResponder()
         return true
     }
 }

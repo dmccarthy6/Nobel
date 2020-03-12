@@ -34,8 +34,3 @@ open class WeightedEdge<W: Comparable & Summable>: Edge, Comparable {
         return lhs.weight < rhs.weight
     }
 }
-
-//extension WeightedEdge: Comparable, CustomStringConvertible {
-//
-//
-//}

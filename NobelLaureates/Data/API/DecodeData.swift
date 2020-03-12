@@ -15,7 +15,7 @@ extension DecodeLaureat {
     
     /// Use JSONDecoder() to decode the local JSON file into Laureate model objects.
     /// - Returns: Array of optional Laureate objects.
-    func decodeJSONFromFileAndPerformSearch(userData: Laureate?) -> [Laureate] {
+    func decodeJSONFromFileAndPerformSearch() -> [Laureate] {
         guard let localJSONData = getJSONDataFromLocalFile() else { return [] }
         
         do {

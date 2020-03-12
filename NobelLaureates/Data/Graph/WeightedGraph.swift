@@ -17,7 +17,7 @@ open class WeightedGraph<V: Equatable & Hashable, W: Comparable & Summable>: Gra
     }
     
     ///
-    func neighborsForIndexWithWeights(_ index: Int) -> [(V, W)] {
+    public func neighborsForIndexWithWeights(_ index: Int) -> [(V, W)] {
         var distanceTuples: [(V, W)] = [(V, W)]()
         for edge in edges[index] {
             distanceTuples += [(verticies[edge.to], edge.weight)]
@@ -26,12 +26,12 @@ open class WeightedGraph<V: Equatable & Hashable, W: Comparable & Summable>: Gra
     }
     
     ///
-    func addEdge(from: Int, to: Int, weight: W) {
+    public func addEdge(from: Int, to: Int, weight: W) {
         addEdge(WeightedEdge<W>(to: from, from: to, weight: weight))
     }
     
     ///
-    func addEdge(from: V, to: V, weight: W) {
+    public func addEdge(from: V, to: V, weight: W) {
         if let u = indexOfVertex(from) {
             if let v = indexOfVertex(to) {
                 addEdge(from: u, to: v, weight: weight)
