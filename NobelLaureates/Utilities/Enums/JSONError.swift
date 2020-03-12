@@ -6,10 +6,12 @@ import Foundation
 
 enum JSONDecodingError: Error {
     case failed
+    case noData
     
     var localizedDescription: String {
         switch self {
-            case .failed: return "JSON Decoding Failed"
+            case .failed:   return "JSON Decoding Failed"
+            case .noData:   return "No Data Passed In"
         }
     }
 }

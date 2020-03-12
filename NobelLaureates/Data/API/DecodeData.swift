@@ -7,23 +7,25 @@ import UIKit
 
 protocol DecodeLaureat {
     associatedtype Element: Decodable
+
 }
 
 extension DecodeLaureat {
     typealias JSONHandler = (Decodable?, JSONDecodingError?) -> Void
     
-    /// Decode the JSON data
-    func decodeLaureatFromJSON(decodingType: Element.Type, completionHandler completion: @escaping JSONHandler) {
-        if let localJsonData = getJSONDataFromLocalFile() {
-            do {
-                
-                let nobelLaureatsModel = try JSONDecoder().decode(decodingType, from: localJsonData)
-                completion(nobelLaureatsModel, nil)
-            }
-            catch {
-                completion(nil, .failed)
-            }
+    /// Use JSONDecoder() to decode the local JSON file into Laureate model objects.
+    /// - Returns: Array of optional Laureate objects.
+    func decodeJSONFromFileAndPerformSearch(userData: Laureate?) -> [Laureate] {
+        guard let localJSONData = getJSONDataFromLocalFile() else { return [] }
+        
+        do {
+            let decodedJSON = try JSONDecoder().decode([Laureate].self, from: localJSONData)
+            return decodedJSON
         }
+        catch let error as NSError {
+            print("ERROR DECODING JSON: \(error.localizedDescription)")
+        }
+        return []
     }
     
     /// Helper function to get Data object from the local json file provided.
@@ -39,6 +41,5 @@ extension DecodeLaureat {
         }
         return nil
     }
-    
     
 }
