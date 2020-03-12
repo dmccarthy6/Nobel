@@ -22,7 +22,7 @@ struct CreateGraph: DecodeLaureat {
     /// Implement the Nobel Laureates graph. This sorts the values by country and groups the nobel laureate events by other events that happened nearby.
     /// Plan here is to initially get the graph created with nearby events linked, then once I have the user enterd Lat/Long values, I can insert that value into my graph and search
     /// For nearby events.
-    func implementNobelLaureatesGraph() {
+    func implementNobelLaureatesGraph(with userEnteredData: Laureate) {
         //Sort the array of Laureate values by country to get the laureates closer to one another
         // Swift .sorted is -> O(n log n)
         let laureatesArray = decodeLocalJSON()
@@ -38,6 +38,14 @@ struct CreateGraph: DecodeLaureat {
             let currentLaureate = countrySorted[i]
             let nextLaureate = countrySorted[i + 1]
             let weight = getDistanceBetween(location1: currentLaureate.laureateLocation, location2: nextLaureate.laureateLocation)
+            
+            let userCountry = getUserCountry(from: userEnteredData.laureateLocation)
+            if currentLaureate.country == userCountry {
+                /// Add our current user to the graph
+//                nobelWeightedGraph.addEdge(from: userEnteredData.firstname, to: <#T##String#>, weight: <#T##Double#>)
+                /// perform search to find closest locations
+//                performDijkstraSearch(graph: nobelWeightedGraph)
+            }
             // If the current country isn't the same as the next country, and we haven't seen it already (it's the only event in it's country)
             if currentLaureate.country != nextLaureate.country && !countriesSet.contains(currentLaureate.country) {
                 nobelWeightedGraph.addEdge(from: currentLaureate.firstname, to: nextLaureate.firstname, weight: weight)
@@ -63,6 +71,19 @@ struct CreateGraph: DecodeLaureat {
 //            //
 //        }
 //    }
+    
+    func getUserCountry(from location: CLLocation) -> String {
+        var userCountry = ""
+        CLGeocoder().reverseGeocodeLocation(location) { (placemarks, error) in
+            guard let placemark = placemarks?.first else {
+                let error = "\(error?.localizedDescription ?? "Error getting User Location") "
+                print(error)
+                return
+            }
+            userCountry = placemark.country ?? "No Country"
+        }
+        return userCountry
+    }
     
     /// Get the distance between two CLLocation values and return a Double
     /// - Returns: Distance in Kilometers

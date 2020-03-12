@@ -28,7 +28,7 @@ final class LaureatesViewController: UIViewController, DecodeLaureat {
             
             let inset = CGFloat(16)
             let deviceIsCompact = environment.container.effectiveContentSize.width < 450
-            let columns = deviceIsCompact ? 3 : 4
+            let columns = deviceIsCompact ? 2 : 3
             
             let section = NSCollectionLayoutSection
                 .grid(itemHeight: .absolute(200), itemSpacing: inset, numberOfColumns: columns)

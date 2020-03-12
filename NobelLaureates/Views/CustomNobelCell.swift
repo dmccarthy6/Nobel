@@ -61,18 +61,18 @@ final class NobelCell: UICollectionViewCell {
         let guide = contentView.layoutMarginsGuide
         
         NSLayoutConstraint.activate([
-            nameLabel.topAnchor.constraint(equalTo: guide.topAnchor),
+            nameLabel.topAnchor.constraint(equalTo: guide.topAnchor, constant: 1),
             nameLabel.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
             nameLabel.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
             
             categoryLabel.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
             categoryLabel.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
-            categoryLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 3),
+            categoryLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 2),
             
             motivationLabel.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
             motivationLabel.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
-            motivationLabel.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor, constant: 3),
-            motivationLabel.bottomAnchor.constraint(equalTo: guide.bottomAnchor)
+            motivationLabel.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor, constant: 2),
+            motivationLabel.bottomAnchor.constraint(lessThanOrEqualTo: guide.bottomAnchor, constant: 1)
         
         ])
     }

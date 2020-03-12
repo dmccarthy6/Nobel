@@ -16,9 +16,8 @@ final class WelcomeViewController: UIViewController, DecodeLaureat {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        
-        stackView.alignment = .center
-        stackView.distribution = .equalSpacing
+        stackView.alignment = .leading
+        stackView.distribution = .fillProportionally
         return stackView
     }()
     private let latitudeTextField: UITextField = {
@@ -27,6 +26,7 @@ final class WelcomeViewController: UIViewController, DecodeLaureat {
         textField.font = .preferredFont(for: .title2, weight: .regular)
         textField.tag = 0
         textField.adjustsFontForContentSizeCategory = true
+        textField.borderStyle = .roundedRect
         textField.textColor = .label
         textField.placeholder = "Latitude"
         return textField
@@ -37,6 +37,7 @@ final class WelcomeViewController: UIViewController, DecodeLaureat {
         textField.font = .preferredFont(for: .title2, weight: .regular)
         textField.tag = 1
         textField.adjustsFontForContentSizeCategory = true
+        textField.borderStyle = .roundedRect
         textField.textColor = .label
         textField.placeholder = "Longitude"
         return textField
@@ -47,8 +48,10 @@ final class WelcomeViewController: UIViewController, DecodeLaureat {
         textField.font = .preferredFont(for: .title2, weight: .regular)
         textField.tag = 2
         textField.adjustsFontForContentSizeCategory = true
+        textField.borderStyle = .roundedRect
         textField.textColor = .label
         textField.placeholder = "Year, ex. 2020"
+        
         return textField
     }()
     typealias Element = Laureate
@@ -102,6 +105,13 @@ final class WelcomeViewController: UIViewController, DecodeLaureat {
         stackView.addArrangedSubview(yearTextField)
         
         NSLayoutConstraint.activate([
+            latitudeTextField.widthAnchor.constraint(equalTo: stackView.widthAnchor),
+            latitudeTextField.heightAnchor.constraint(equalToConstant: 60),
+            longitudeTextField.widthAnchor.constraint(equalTo: stackView.widthAnchor),
+            longitudeTextField.heightAnchor.constraint(equalToConstant: 60),
+            yearTextField.widthAnchor.constraint(equalTo: stackView.widthAnchor),
+            yearTextField.heightAnchor.constraint(equalToConstant: 60),
+            
             textBackground.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
             textBackground.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
             textBackground.topAnchor.constraint(equalTo: stackView.topAnchor),
@@ -110,7 +120,7 @@ final class WelcomeViewController: UIViewController, DecodeLaureat {
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            stackView.heightAnchor.constraint(equalToConstant: 300)
+            stackView.heightAnchor.constraint(equalToConstant: 180)
         ])
     }
     
