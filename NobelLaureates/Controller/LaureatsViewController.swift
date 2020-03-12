@@ -3,15 +3,15 @@
 
 import UIKit
 
-/* Lat: 38.723440 Long: -121.084080 */
+/* Test Lat: 38.723440 Long: -121.084080 */
 final class LaureatesViewController: UIViewController, DecodeLaureat {
     //MARK: - Properties
     typealias Element = Laureate
     typealias DiffableSnapShot = NSDiffableDataSourceSnapshot<Section, Element>
     typealias DifDataSource = UICollectionViewDiffableDataSource<Section, Element>
     var userEnteredData: Laureate?
-    private var dataSource = [Laureate]()
-
+    var dataSource: [Laureate] = []
+    
     enum Section: CaseIterable {
         case closestEvents
         
@@ -46,7 +46,7 @@ final class LaureatesViewController: UIViewController, DecodeLaureat {
         collectionView.registerCell(cellClass: NobelCell.self)
         collectionView.registerSupplementaryView(viewClass: HeaderView.self)
         return collectionView
-    }()
+        }()
     private lazy var diffableDataSource: DifDataSource = {
         /// set up cell
         let diffableDataSource = DifDataSource(collectionView: collectionView) { [weak self]
@@ -54,7 +54,6 @@ final class LaureatesViewController: UIViewController, DecodeLaureat {
             
             let cell: NobelCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.configure(name: element.firstname, surname: element.surname, category: element.category, motivation: element.motivation)
-//            cell.configure(name: "Name", surname: "Lastname", category: "Category", motivation: "motivation")
             return cell
         }
         /// Set Up Header
@@ -75,8 +74,8 @@ final class LaureatesViewController: UIViewController, DecodeLaureat {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
-        setupDatasource()
         decodeJSONDataAndCreateGraph()
+        setupDatasource()
         navigationItem.title = "Nobel Laureate Events"
     }
     
@@ -84,8 +83,8 @@ final class LaureatesViewController: UIViewController, DecodeLaureat {
     
     //MARK: - Helpers
     private func setupDatasource() {
-        let snapShot = buildSnapshot(with: dataSource)
-        diffableDataSource.apply(snapShot)
+        let snapshot = buildSnapshot(with: dataSource)
+        diffableDataSource.apply(snapshot)
     }
     
     private func buildSnapshot(with dataSource: [Laureate]) -> DiffableSnapShot {
@@ -113,12 +112,12 @@ final class LaureatesViewController: UIViewController, DecodeLaureat {
     ///Calls 'decodeJSONFromFile' method in DecodeLaureat protocol that
     ///
     func decodeJSONDataAndCreateGraph() {
-        let laureats = decodeJSONFromFileAndPerformSearch(userData: userEnteredData)
+        let laureats = decodeJSONFromFileAndPerformSearch()
         dataSource = laureats
-        let graph = CreateGraph(nobelLaureates: laureats)
-        graph.implementNobelLaureatesGraph()
-        
-//        graph.searchEvents(laureats, userLocation: tempLocation)
+        let graph = CreateGraph()
+        if let userLaureate = userEnteredData {
+            graph.implementNobelLaureatesGraph(with: userLaureate)
+        }
     }
     
 }

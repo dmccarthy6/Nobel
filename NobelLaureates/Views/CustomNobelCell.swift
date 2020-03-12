@@ -10,7 +10,7 @@ final class NobelCell: UICollectionViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.font = .preferredFont(for: .body, weight: .semibold)
+        label.font = .preferredFont(for: .body, weight: .medium)
         label.textColor = .label
         return label
     }()
@@ -19,7 +19,7 @@ final class NobelCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.font = .preferredFont(for: .body, weight: .medium)
-        label.textColor = .label
+        label.textColor = .systemRed
         return label
     }()
     private var motivationLabel: UILabel = {
@@ -54,7 +54,6 @@ final class NobelCell: UICollectionViewCell {
     
     //MARK: - Helper Methods
     func layoutCell() {
-        backgroundColor = .red
         contentView.addSubview(nameLabel)
         contentView.addSubview(categoryLabel)
         contentView.addSubview(motivationLabel)
@@ -68,11 +67,12 @@ final class NobelCell: UICollectionViewCell {
             
             categoryLabel.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
             categoryLabel.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
-            categoryLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor),
+            categoryLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 3),
             
             motivationLabel.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
             motivationLabel.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
-            motivationLabel.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor)
+            motivationLabel.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor, constant: 3),
+            motivationLabel.bottomAnchor.constraint(equalTo: guide.bottomAnchor)
         
         ])
     }
@@ -91,8 +91,7 @@ final class NobelCell: UICollectionViewCell {
     
     //MARK: - Interface Methods
     func configure(name: String?, surname: String?, category: String?, motivation: String?) {
-        let fullName = "\(name ?? ""), \(surname ?? "")"
-        print("NAME: \(name), SURNAME: \(surname), CAT: \(category), motivation: \(motivation)")
+        let fullName = "\(name ?? "") \(surname ?? "")"
         nameLabel.text = fullName
         categoryLabel.text = category
         motivationLabel.text = motivation
